@@ -6,25 +6,30 @@ class Head extends React.Component {
                     <div id="number">
                         <span>Казань </span><span>8 800 467 98 32</span>
                     </div>
-                    <div>
-                        <img src="img/лого.png" alt="" id="logo"/>
+                    <div id="logo">
+                        <img src="img/лого.png" alt=""/>
                     </div>
                     <div id="vedro">
                         <span>корзина</span>
                         <img src="img/basket.png" alt="" id="basket"/>
                     </div>
-                    <div>
-                        <img src="img/search.png" alt="" id="lupa"/>
-                        <input type="text"/>
+
+                    <div class="inline-search">
+                        <input type="text" type="search" className="text_search"/>
+                        <p className="box-for-search"><input type="image" src="img/search.png" id="lupa"/></p>
+                        <div id="namering">
+                            <p className="nameHead" id="akts">АКЦИИ</p>
+                            <p className="nameHead" id="novin">НОВИНКИ</p>
+                            <p className="nameHead" id="ring">КОЛЬЦА</p>
+                            <p className="nameHead" id="serg">СЕРЬГИ</p>
+                            <p className="nameHead" id="podves">ПОДВЕСКА</p>
+                            <p className="nameHead" id="kulon">КОЛЬЕ И КУЛОНЫ</p>
                     </div>
-                    <div>
-                        <p className="nameHead">АКЦИИ</p>
-                        <p className="nameHead">НОВИНКИ</p>
-                        <p className="nameHead">КОЛЬЦА</p>
-                        <p className="nameHead">СЕРЬГИ</p>
-                        <p className="nameHead">ПОДВЕСКА</p>
-                        <p className="nameHead">КОЛЬЕ И КУЛОНЫ</p>
-                    </div>
+                    
+                    </div>    
+
+
+                   
             </div>
         )
     }
