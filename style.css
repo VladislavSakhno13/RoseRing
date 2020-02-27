@@ -210,4 +210,80 @@
     justify-self: center;
     align-self: center;
 }
+#pagepodveska{
+    display:grid;
+    width: 100%;
+    max-width: 1920px;
+    height: 1732px;
+    background-color: #FFF;
+    box-shadow: inset 6px 18px 8px rgba(0, 0, 0, .2);
+}
+#podveskapagebox{
+    display: grid;
+    width: 1140px;
+    height: 1561px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+}
+#pageserg{
+    display:grid;
+    width: 100%;
+    max-width: 1920px;
+    height: 1732px;
+    background-color: #FFF;
+    box-shadow: inset 6px 18px 8px rgba(0, 0, 0, .2);
+}
+#sergpagebox{
+    display: grid;
+    width: 1140px;
+    height: 1561px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+}
+#pagering{
+    display:grid;
+    width: 100%;
+    max-width: 1920px;
+    height: 1732px;
+    background-color: #FFF;
+    box-shadow: inset 6px 18px 8px rgba(0, 0, 0, .2);
+}
+#ringpagebox{
+    display: grid;
+    width: 1140px;
+    height: 1561px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+}
+#pageTovar{
+    display: grid;
+    width: 100%;
+    max-width: 1920px;
+    height: 675px;
+    background-color: #fff;
+    box-shadow: inset 6px 18px 8px rgba(0, 0, 0, .2);
+    grid-template-columns: 1fr 1fr;
+}
+.shopbox{
+    display: grid;
+    border: 1px solid #000;
+}
+.imgbox{
+    border:2px solid #000;
+    width: 554px;
+    height: 554px;
+    justify-self: center;
+    align-self: center;
+}
+.more{
+    width: 90px;
+    height: 40px;
+    background-color: #000;
+    border:1px solid #000;
+    color: #fff;
+    font-size: 14pt;
+}
 
