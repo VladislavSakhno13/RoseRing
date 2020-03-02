@@ -1,5 +1,7 @@
 var React = require('react');
 class Tovar extends React.Component {
+    
+    
     render(){
         return(
             <div id="pageTovar">
@@ -8,7 +10,7 @@ class Tovar extends React.Component {
                 </div>
                 <div className="shopbox">
                     <div>
-                        <span>Название</span>
+                        <span>{this.props.cost}</span>
                     </div>
                     <div>
                         <span>артикул</span>

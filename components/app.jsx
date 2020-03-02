@@ -26,13 +26,30 @@ ReactDOM.render(<Bottom/>,document.getElementById('bottom'));
 axios.get('./rest/gold.php')
     .then(function(response){
         for(let i = 0;i<8;i++){
-            renderRings(response.data[0]);
-            renderSergi();
-            renderPodves();
-            renderKulon(); 
+            renderRings(response.data[i]);
         }
     })
 
+    axios.get('./rest/kulon.php')
+    .then(function(response){
+        for(let i = 0;i<8;i++){
+            renderKulon(response.data[i]);
+        }
+    })
+
+    axios.get('./rest/podves.php')
+    .then(function(response){
+        for(let i = 0;i<8;i++){
+            renderPodves(response.data[i]);
+        }
+    })
+
+    axios.get('./rest/sergi.php')
+    .then(function(response){
+        for(let i = 0;i<8;i++){
+            renderSergi(response.data[i]);
+        }
+    })
 
 document.getElementById('kulon').onclick = function(){//переход к кулонам
    window.scrollBy(0,5400);
@@ -158,73 +175,73 @@ function renderRings(dataring){ //создаю форму для колец
     img.src = dataring.img;
     img.className = "ring";
     const ptext = document.createElement('p');
-    ptext.innerHTML = "ДОХУЯ";
+    ptext.innerHTML = dataring.cost;
     ptext.className = "costp";
     const p = document.createElement('p');
     p.className="zakaz";
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
-        ReactDOM.render(<Tovar/>,document.getElementById('body'));
+        ReactDOM.render(<Tovar cost = {'цена' + dataring.cost}/>,document.getElementById('body'));
     }
     div.appendChild(img);
     div.appendChild(ptext);
     div.appendChild(p);
     document.getElementById('ringbox').appendChild(div);  
 }
-function renderSergi(){ //для серег хуита
+function renderSergi(datasergi){ //для серег хуита
     const div = document.createElement('div');
     div.className = "ringform";
     const img = document.createElement('img');
-    img.src = 'img/sergi.png';
+    img.src = datasergi.img;
     img.className = "ring";
     const ptext = document.createElement('p');
-    ptext.innerHTML = "ДОХУЯ";
+    ptext.innerHTML = datasergi.cost;
     ptext.className = "costp";
     const p = document.createElement('p');
     p.className="zakaz";
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
-        ReactDOM.render(<Tovar/>,document.getElementById('body'));
+        ReactDOM.render(<Tovar cost = {'цена' + datasergi.cost}/>,document.getElementById('body'));
     }
     div.appendChild(img);
     div.appendChild(ptext);
     div.appendChild(p);
     document.getElementById('serbox').appendChild(div);
 }
-function renderPodves(){ //тута подвески хуески вся хуйня
+function renderPodves(datapodves){ //тута подвески хуески вся хуйня
     const div = document.createElement('div');
     div.className = "ringform";
     const img = document.createElement('img');
-    img.src = 'img/podveska.png';
+    img.src = datapodves.img;
     img.className = "ring";
     const ptext = document.createElement('p');
-    ptext.innerHTML = "ДОХУЯ";
+    ptext.innerHTML = datapodves.cost;
     ptext.className = "costp";
     const p = document.createElement('p');
     p.className="zakaz";
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
-        ReactDOM.render(<Tovar/>,document.getElementById('body'));
+        ReactDOM.render(<Tovar cost = {'цена' + datapodves.cost}/>,document.getElementById('body'));
     }
     div.appendChild(img);
     div.appendChild(ptext);
     div.appendChild(p);
     document.getElementById('podvesbox').appendChild(div);
 }
-function renderKulon(){ //тут чиляться кулоны ебать их в рот
+function renderKulon(datakulon){ //тут чиляться кулоны ебать их в рот
     const div = document.createElement('div');
     div.className = "ringform";
     const img = document.createElement('img');
-    img.src = 'img/kulon.png';
+    img.src = datakulon.img;
     img.className = "ring";
     const ptext = document.createElement('p');
-    ptext.innerHTML = "ДОХУЯ";
+    ptext.innerHTML = datakulon.cost;
     ptext.className = "costp";
     const p = document.createElement('p');
     p.className="zakaz";
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
-        ReactDOM.render(<Tovar/>,document.getElementById('body'));
+        ReactDOM.render(<Tovar cost = {'цена' + datakulon.cost}/>,document.getElementById('body'));
     }
     div.appendChild(img);
     div.appendChild(ptext);
