@@ -18,12 +18,12 @@ class Head extends React.Component {
                         <input type="text" type="search" className="text_search"/>
                         <p className="box-for-search"><input type="image" src="img/search.png" id="lupa"/></p>
                         <div id="namering">
-                            <p className="nameHead" id="akts">АКЦИИ</p>
-                            <p className="nameHead" id="novin">НОВИНКИ</p>
-                            <p className="nameHead" id="ring">КОЛЬЦА</p>
-                            <p className="nameHead" id="serg">СЕРЬГИ</p>
-                            <p className="nameHead" id="podves">ПОДВЕСКА</p>
-                            <p className="nameHead" id="kulon">КОЛЬЕ И КУЛОНЫ</p>
+                            <p className="nameHead" id="akts"><a href="#box1">АКЦИИ</a></p>
+                            <p className="nameHead" id="novin"><a href="#box2">НОВИНКИ</a></p>
+                            <p className="nameHead" id="ring"><a href="#box3">КОЛЬЦА</a></p>
+                            <p className="nameHead" id="serg"><a href="#box4">СЕРГИ</a></p>
+                            <p className="nameHead" id="podves"><a href="#box5">ПОДВЕСКИ</a></p>
+                            <p className="nameHead" id="kulon"><a href="#box6">КОЛЬЕ и КУЛОНЫ</a></p>
                     </div>
                     
                     </div>    

@@ -12,74 +12,10 @@ var axios = require('axios');
 
 
 ReactDOM.render(<Head/>,document.getElementById('head'));
-ReactDOM.render(<Body/>,document.getElementById('body'));
 ReactDOM.render(<Bottom/>,document.getElementById('bottom'));
+ReactDOM.render(<Body/>,document.getElementById('body'));
+showbasikpage()
 
-
-/*for(let i = 0;i<8;i++){
-    renderbox();
-    renderSergi();
-    renderPodves();
-    renderKulon(); 
-}*/
-
-axios.get('./rest/gold.php')
-    .then(function(response){
-        for(let i = 0;i<8;i++){
-            renderRings(response.data[i]);
-        }
-    })
-
-    axios.get('./rest/kulon.php')
-    .then(function(response){
-        for(let i = 0;i<8;i++){
-            renderKulon(response.data[i]);
-        }
-    })
-
-    axios.get('./rest/podves.php')
-    .then(function(response){
-        for(let i = 0;i<8;i++){
-            renderPodves(response.data[i]);
-        }
-    })
-
-    axios.get('./rest/sergi.php')
-    .then(function(response){
-        for(let i = 0;i<8;i++){
-            renderSergi(response.data[i]);
-        }
-    })
-
-document.getElementById('kulon').onclick = function(){//переход к кулонам
-   window.scrollBy(0,5400);
-}
-
-document.getElementById('logo').onclick = function(){//обратно в началу
-    ReactDOM.render(<Body/>,document.getElementById('body'));
-    for(let i = 0;i<8;i++){
-        renderRings();
-        renderSergi();
-        renderPodves();
-        renderKulon();
-        
-    }
-    
-}
-
-document.getElementById('podves').onclick = function(){// переход к подвескам
-    window.scrollBy(0,4400)
-}
-
-document.getElementById('serg').onclick = function(){// к серьгам
-   window.scrollBy(0,3500);
-
-}
-
-document.getElementById('ring').onclick = function(){//к кольцам
-    window.scrollBy(0,2350);
-    
-}
 
 
 function renderPageRing(dataring){//доп кольца
@@ -181,7 +117,9 @@ function renderRings(dataring){ //создаю форму для колец
     p.className="zakaz";
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
-        ReactDOM.render(<Tovar cost = {'цена' + dataring.cost}/>,document.getElementById('body'));
+        
+        ReactDOM.render(<Tovar cost = {'цена ' + dataring.cost} img={dataring.img}/>,document.getElementById('body'));
+        window.scrollBy(0,-10000);
     }
     div.appendChild(img);
     div.appendChild(ptext);
@@ -202,6 +140,7 @@ function renderSergi(datasergi){ //для серег хуита
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
         ReactDOM.render(<Tovar cost = {'цена' + datasergi.cost}/>,document.getElementById('body'));
+        window.scrollBy(0,-10000);
     }
     div.appendChild(img);
     div.appendChild(ptext);
@@ -222,6 +161,7 @@ function renderPodves(datapodves){ //тута подвески хуески вс
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
         ReactDOM.render(<Tovar cost = {'цена' + datapodves.cost}/>,document.getElementById('body'));
+        window.scrollBy(0,-10000);
     }
     div.appendChild(img);
     div.appendChild(ptext);
@@ -242,6 +182,7 @@ function renderKulon(datakulon){ //тут чиляться кулоны ебат
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
         ReactDOM.render(<Tovar cost = {'цена' + datakulon.cost}/>,document.getElementById('body'));
+        window.scrollBy(0,-10000);
     }
     div.appendChild(img);
     div.appendChild(ptext);
@@ -249,11 +190,36 @@ function renderKulon(datakulon){ //тут чиляться кулоны ебат
     document.getElementById('kulonbox').appendChild(div);
 }
 
-/*function getRingData(){
-    let dat;
+function showbasikpage(){
+
+    //ReactDOM.render(<Body/>,document.getElementById('body'));
+
     axios.get('./rest/gold.php')
     .then(function(response){
-        this.dat = response.data;
+        for(let i = 0;i<8;i++){
+            renderRings(response.data[i]);
+        }
     })
-    return dat;
-}*/
+
+    axios.get('./rest/kulon.php')
+    .then(function(response){
+        for(let i = 0;i<8;i++){
+            renderKulon(response.data[i]);
+        }
+    })
+
+    axios.get('./rest/podves.php')
+    .then(function(response){
+        for(let i = 0;i<8;i++){
+            renderPodves(response.data[i]);
+        }
+    })
+
+    axios.get('./rest/sergi.php')
+    .then(function(response){
+        for(let i = 0;i<8;i++){
+            renderSergi(response.data[i]);
+        }
+    })
+
+}
