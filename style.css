@@ -269,10 +269,10 @@
 }
 .shopbox{
     display: grid;
-    border: 1px solid #000;
+    
 }
 .imgbox{
-    border:2px solid #000;
+    border: 2px solid #000;
     width: 554px;
     height: 554px;
     margin-left: 20%;
@@ -289,5 +289,37 @@
 .imgbox>img{
     width: 550px;
     height: 550px;
+}
+#name{
+    font-size: 17pt;
+    margin-top: 67px;
+}
+.tovarblock{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#binbutton{
+    width: 292px;
+    line-height:50px;
+    color: #fff;
+    text-align: center;  
+    height: 58px;
+    background-color: #000;
+    font-size: 20pt;
+}
+#costtovar{
+    font-size: 20pt;
+}
+#hatstring{
+    line-height:50px;
+    color: #000; 
+    border-bottom: 1px solid #000;
+    width: 502px;
+    height: 45px;
+    font-size: 25pt;
+}
+a{
+   text-decoration: none;
+   color: #000;
 }
 

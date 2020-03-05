@@ -8,26 +8,26 @@ class Tovar extends React.Component {
                 <div className="shopbox">
                     <p className="imgbox"><img src={this.props.img} alt=""/></p>
                 </div>
-                <div className="shopbox">
-                    <div>
-                        <span>название</span>
+                <div className="shopbox2">
+                    <div id="name">
+                        <span >название</span>
                     </div>
-                    <div>
-                        <span>артикул</span>
+                    <div className="tovarblock">
+                        <span>Артикул:</span>
                     </div>
-                    <div>
+                    <div className="tovarblock" id="costtovar">
                         <span>{this.props.cost}</span>
                     </div>
-                    <div>в корзину</div>
-                    <div>характеристики</div>
+                    <div className="tovarblock" id="binbutton">в корзину</div>
+                    <div className="tovarblock" id="hatstring"><span>характеристики</span></div>
 
-                    <div><span>примерный вес</span><span></span></div>
+                    <div className="tovarblock"><span>примерный вес</span><span></span></div>
 
-                    <div><span>тип металла</span><span></span></div>
+                    <div className="tovarblock"><span>тип металла</span><span></span></div>
 
-                    <div><span>Проба</span><span></span></div>
+                    <div className="tovarblock"><span>Проба</span><span></span></div>
                     
-                    <div><span>Тип вставки</span><span></span></div>
+                    <div className="tovarblock"><span>Тип вставки</span><span></span></div>
 
                 </div>
             </div>

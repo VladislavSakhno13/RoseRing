@@ -118,7 +118,7 @@ function renderRings(dataring){ //создаю форму для колец
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
         
-        ReactDOM.render(<Tovar cost = {'цена ' + dataring.cost} img={dataring.img}/>,document.getElementById('body'));
+        ReactDOM.render(<Tovar cost = {dataring.cost} img={dataring.img}/>,document.getElementById('body'));
         window.scrollBy(0,-10000);
     }
     div.appendChild(img);
