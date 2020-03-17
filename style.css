@@ -64,7 +64,7 @@
     display: grid;
     max-width:1920px;
     width: 100%;
-    height: 1288px;
+    height: 970px;
     background-color: #FFF;
 }
 #box4{
@@ -198,65 +198,68 @@
     display:grid;
     width: 100%;
     max-width: 1920px;
-    height: 1732px;
     background-color: #FFF;
     box-shadow: inset 6px 18px 8px rgba(0, 0, 0, .2);
 }
 #kulonpagebox{
     display: grid;
-    width: 1140px;
-    height: 1561px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-self: center;
     align-self: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
 }
 #pagepodveska{
     display:grid;
     width: 100%;
     max-width: 1920px;
-    height: 1732px;
     background-color: #FFF;
     box-shadow: inset 6px 18px 8px rgba(0, 0, 0, .2);
 }
 #podveskapagebox{
     display: grid;
-    width: 1140px;
-    height: 1561px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-self: center;
     align-self: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
 }
 #pageserg{
     display:grid;
     width: 100%;
     max-width: 1920px;
-    height: 1732px;
     background-color: #FFF;
     box-shadow: inset 6px 18px 8px rgba(0, 0, 0, .2);
 }
 #sergpagebox{
     display: grid;
-    width: 1140px;
-    height: 1561px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-self: center;
     align-self: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
 }
 #pagering{
     display:grid;
     width: 100%;
-    max-width: 1920px;
-    height: 1732px;
     background-color: #FFF;
     box-shadow: inset 6px 18px 8px rgba(0, 0, 0, .2);
 }
 #ringpagebox{
     display: grid;
-    width: 1140px;
-    height: 1561px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-self: center;
     align-self: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
 }
 #pageTovar{
     display: grid;
@@ -285,6 +288,8 @@
     border:1px solid #000;
     color: #fff;
     font-size: 14pt;
+    margin-bottom: 0;
+    margin-right: 0px;
 }
 .imgbox>img{
     width: 550px;
@@ -307,6 +312,9 @@
     background-color: #000;
     font-size: 20pt;
 }
+#binbutton:hover{
+    background-color: gray;
+}
 #costtovar{
     font-size: 20pt;
 }
@@ -322,4 +330,63 @@ a{
    text-decoration: none;
    color: #000;
 }
+#articul{
+    color: #625f5f;
+    font-size: 12pt;
+}
+#ferstbottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left:120px;
+    margin-right:120px;
+}
+.ferst_p{
+    height: 321px;
+    justify-self: center;
+    align-self: center;
+}
+.ferst_p>span{
+    display: block;
+    color:#fff;
+    margin: 20px;
+    font-size: 18pt;
+}
+#border{
+    border-bottom: 2px solid #fff;
+    height: 321px;
+    width: 100%;
+}
+#secondbottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.second_p{
+    color:#fff;
+    width: 100%;
+    height: 232px;
+}
 
+.second_p>span{
+    display: block;
+}
+#imgbottom{
+    width: 50px;
+    margin: 20px;
+    margin-top: 30px;
+}
+#blocl1>span{
+    margin-top: 20px;
+    margin-left: 180px;
+    font-size: 16pt;
+    color: #fff;
+}
+#linkimg{
+    margin-left: 230px;
+}
+#intop>img{
+    width: 60px;
+    height: 60px;
+}
+.a{
+    color: #fff;
+}

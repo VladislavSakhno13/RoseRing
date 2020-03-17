@@ -10,10 +10,10 @@ class Tovar extends React.Component {
                 </div>
                 <div className="shopbox2">
                     <div id="name">
-                        <span >название</span>
+                        <span >{this.props.name}</span>
                     </div>
                     <div className="tovarblock">
-                        <span>Артикул:</span>
+                        <span id="articul">Артикул:</span><span>{" " + this.props.articul}</span>
                     </div>
                     <div className="tovarblock" id="costtovar">
                         <span>{this.props.cost}</span>
@@ -21,13 +21,13 @@ class Tovar extends React.Component {
                     <div className="tovarblock" id="binbutton">в корзину</div>
                     <div className="tovarblock" id="hatstring"><span>характеристики</span></div>
 
-                    <div className="tovarblock"><span>примерный вес</span><span></span></div>
+        <           div className="tovarblock"><span>примерный вес</span><span>{" " + this.props.n1}</span></div>
 
-                    <div className="tovarblock"><span>тип металла</span><span></span></div>
+                    <div className="tovarblock"><span>тип металла</span><span>{" "+this.props.n2}</span></div>
 
-                    <div className="tovarblock"><span>Проба</span><span></span></div>
+                    <div className="tovarblock"><span>Проба</span><span>{" " + this.props.n3}</span></div>
                     
-                    <div className="tovarblock"><span>Тип вставки</span><span></span></div>
+                    <div className="tovarblock"><span>Тип вставки</span><span>{" "+this.props.n4}</span></div>
 
                 </div>
             </div>
