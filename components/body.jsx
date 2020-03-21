@@ -14,7 +14,6 @@ class Body extends React.Component {
                <div id="box4"><div id="serbox"></div><p className="more" id="m2">Подробнее</p></div>
                <div id="box5"><div id="podvesbox"></div> <p className="more" id="m3">Подробнее</p></div>
                <div id="box6"><div id="kulonbox"></div><p className="more" id="m4">Подробнее</p></div>
-               <div id="intop"><img src="img/strelka.png" alt=""/></div>
            </div>
         )
     }

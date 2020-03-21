@@ -6,7 +6,7 @@ class Head extends React.Component {
                     <div id="number">
                         <span>Казань </span><span>8 800 467 98 32</span>
                     </div>
-                    <div id="logo">
+                    <div id="logo" >
                         <img src="img/лого.png" alt=""/>
                     </div>
                     <div id="vedro">

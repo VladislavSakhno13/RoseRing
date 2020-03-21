@@ -32,7 +32,7 @@ function renderPageRing(dataring){//доп кольца
     p.className="zakaz";
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
-        
+        document.getElementById('logo').class = "true";
         ReactDOM.render(<Tovar cost = {dataring.cost} img={dataring.img} articul={dataring.weight} name={dataring.name}
         n1 = {dataring.ves} n2 = {dataring.metal} n3 = {dataring.sample} n4 = {dataring.type}/>,document.getElementById('body'));
         window.scrollBy(0,-10000);
@@ -127,7 +127,7 @@ function renderRings(dataring){ //создаю форму для колец
     p.className="zakaz";
     p.innerHTML = "ЗАКАЗАТЬ";
     p.onclick = function(){
-        
+        document.getElementById('logo').id = "123";
         ReactDOM.render(<Tovar cost = {dataring.cost} img={dataring.img} articul={dataring.weight} name={dataring.name}
         n1 = {dataring.ves} n2 = {dataring.metal} n3 = {dataring.sample} n4 = {dataring.type}/>,document.getElementById('body'));
         window.scrollBy(0,-10000);
