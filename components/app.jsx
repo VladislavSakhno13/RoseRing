@@ -241,13 +241,12 @@ document.getElementById('m3').onclick = function(){//подвески
 }
 
 function showbasikpage(){
-
     //ReactDOM.render(<Body/>,document.getElementById('body'));
-
     axios.get('./rest/gold.php')
     .then(function(response){
         for(let i = 0;i<8;i++){
             renderRings(response.data[i]);
+            console.log(response.data);
         }
     })
 

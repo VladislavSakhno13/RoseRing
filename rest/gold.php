@@ -6,13 +6,13 @@
  if($_SERVER['REQUEST_METHOD'] == 'GET'){
     
         $data = array();
-        $sql = $conect->query("SELECT * FROM `rings`");
+        $sql = $conect->query("SELECT * FROM `rings` INNER JOIN `metal` ON `rings`.`metal_id` = `metal`.`id`");
         while ($d = $sql->fetch_assoc()) {
             $data[] = $d;   
     }
     exit(json_encode($data));
 }
-
+//"SELECT DISTINCT * FROM `rings` INNER JOIN `metal` ON `podves`.`metal_id` = `metal`.`id`"
 else if($_SERVER['REQUEST_METHOD'] == 'POST'){
    
 

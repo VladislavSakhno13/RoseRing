@@ -6,7 +6,7 @@
  if($_SERVER['REQUEST_METHOD'] == 'GET'){
     
         $data = array();
-        $sql = $conect->query("SELECT * FROM `sergi`");
+        $sql = $conect->query("SELECT * FROM `sergi` INNER JOIN `metal` ON `sergi`.`metal_id` = `metal`.`id`");
         while ($d = $sql->fetch_assoc()) {
             $data[] = $d;   
     }
