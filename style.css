@@ -392,3 +392,30 @@ a{
 .a{
     color: #fff;
 }
+.bin{
+   display: none;
+    position: absolute;
+    width: 360px;
+    height: 500px;
+    border: 1px solid #000;
+    background-color: #fff;
+    left: -180px;
+    margin-left: 50%;
+    margin-top: 40px;
+}
+.sentgolg{
+    width: 90px;
+    height: 40px;
+    justify-self: center;
+    align-self: flex-end;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+.sentgolg:hover{
+    background-color:#625f5f;
+}
+#delete{
+    display: grid;
+}

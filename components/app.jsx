@@ -14,11 +14,27 @@ var axios = require('axios');
 ReactDOM.render(<Head/>,document.getElementById('head'));
 ReactDOM.render(<Bottom/>,document.getElementById('bottom'));
 ReactDOM.render(<Body/>,document.getElementById('body'));
-showbasikpage()
+showbasikpage();
 
 
+/*document.getElementById('basket').onclick = function(){
+    document.getElementsByClassName('bin')[0].style.display = 'grid';
+    axios.get('./rest/bin.php')
+    then(function(response){
+        console.log(response.data);
+    })
+    
+}*/
+axios.delete('./rest/bin.php')
+.then(function(response){
+    console.log('delete complete');
+})
+document.getElementById('logo').onclick = function(){
+        ReactDOM.unmountComponentAtNode(document.getElementById('body'));
+        ReactDOM.render(<Body/>,document.getElementById('body'));
+        showbasikpage();
 
-
+}
 function renderPageRing(dataring){//доп кольца
     const div = document.createElement('div');
     div.className = "ringform";
@@ -246,7 +262,7 @@ function showbasikpage(){
     .then(function(response){
         for(let i = 0;i<8;i++){
             renderRings(response.data[i]);
-            console.log(response.data);
+           
         }
     })
 

@@ -4,6 +4,9 @@ class Body extends React.Component {
     render(){
         return(
            <div id='delete'>
+               <div className="bin">
+                   <p className="sentgolg">заказать</p>
+               </div>
                <div id="box1">
                    <p className="redimg"><img src="img/BMSM.png" alt=""/></p>
                </div>

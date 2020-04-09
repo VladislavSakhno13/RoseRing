@@ -1,6 +1,25 @@
 var React = require('react');
+var axios = require('axios');
 class Tovar extends React.Component {
-    
+    constructor(props){
+        super(props);
+        this.state = {
+            name: this.props.name,
+            articul: this.props.articul
+        };
+       this.setBin=this.setBin.bind(this);
+    }
+    setBin(){
+        let setData = {
+            name: this.state.name,
+            articul: this.state.articul
+        }
+        let data = JSON.stringify(setData);
+        axios.post('./rest/bin.php',data)
+        .then(function(response){
+            console.log(response.data);
+        })
+    }
     
     render(){
         return(
@@ -18,7 +37,7 @@ class Tovar extends React.Component {
                     <div className="tovarblock" id="costtovar">
                         <span>{this.props.cost}</span>
                     </div>
-                    <div className="tovarblock" id="binbutton">в корзину</div>
+                    <div className="tovarblock" id="binbutton" onClick={this.setBin}>в корзину</div>
                     <div className="tovarblock" id="hatstring"><span>характеристики</span></div>
 
         <           div className="tovarblock"><span>примерный вес</span><span>{" " + this.props.n1}</span></div>

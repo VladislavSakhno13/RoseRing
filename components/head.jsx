@@ -1,16 +1,31 @@
 var React = require('react');
+var Body = require('./body.jsx');
+var ReactDOM = require('react-dom');
+var axios = require('axios');
 class Head extends React.Component {
+   
+    showbin(){
+        document.getElementsByClassName('bin')[0].style.display = 'grid';
+        axios.get('./rest/bin.php')
+        .then(function(response){
+            for(let i=0;i<response.data.length;i++){
+                let div = document.createElement('div');
+                let name = document.createElement('span');
+            }
+            
+        })
+    }
     render(){
         return(
             <div className="head" >      
                     <div id="number">
                         <span>Казань </span><span>8 800 467 98 32</span>
                     </div>
-                    <div id="logo" >
+                    <div id="logo">
                         <img src="img/лого.png" alt=""/>
                     </div>
-                    <div id="vedro">
-                        <span>корзина</span>
+                    <div id="vedro" onClick={this.showbin}>
+                        <span id>корзина</span>
                         <img src="img/basket.png" alt="" id="basket"/>
                     </div>
 
