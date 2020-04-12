@@ -392,11 +392,11 @@ a{
 .a{
     color: #fff;
 }
-.bin{
+#bin{
    display: none;
     position: absolute;
     width: 360px;
-    height: 500px;
+    
     border: 1px solid #000;
     background-color: #fff;
     left: -180px;

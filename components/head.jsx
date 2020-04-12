@@ -5,14 +5,22 @@ var axios = require('axios');
 class Head extends React.Component {
    
     showbin(){
-        document.getElementsByClassName('bin')[0].style.display = 'grid';
+        document.getElementById('bin').style.display = 'grid';
         axios.get('./rest/bin.php')
         .then(function(response){
             for(let i=0;i<response.data.length;i++){
-                let div = document.createElement('div');
+                let div1 = document.createElement('div');
                 let name = document.createElement('span');
+                let articul = document.createElement('span');
+                name.className = 'namee';
+                articul.className = 'articulO';
+                name.innerHTML = response.data[i].name;
+                articul.innerHTML = response.data[i].articul;
+                div1.appendChild(name);
+                div1.appendChild(articul);
+                document.getElementById('text').appendChild(div1);
+                
             }
-            
         })
     }
     render(){

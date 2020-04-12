@@ -1,11 +1,36 @@
 var React = require('react');
- 
+var axios = require('axios');
 class Body extends React.Component {
+    setOrder(){
+    let dataname = "";
+    let dataartik = "";
+    let costname = document.getElementsByClassName('namee');
+    let costarticul = document.getElementsByClassName('articulO');
+    let phone = document.getElementById('orderphone').value;
+    for(let i=0;i<costname.length;i++){
+        dataname = dataname + costname[i].innerHTML + "/";
+    }
+    for(let i=0;i<costarticul.length;i++){
+        dataartik = dataartik + costarticul[i].innerHTML + "/";
+    }
+    let data = {
+        name: dataname,
+        articul:dataartik,
+        phone: phone
+    }
+    axios.post('./rest/order.php',JSON.stringify(data))
+    .then(function(response){
+        console.log(response.data);
+    })
+    }
     render(){
         return(
            <div id='delete'>
-               <div className="bin">
-                   <p className="sentgolg">заказать</p>
+               <div id="bin">
+                   <biv id="text"></biv>
+                   <span>Ведите свой номер:</span>
+                   <input type="text" id="orderphone"/>
+                   <p className="sentgolg" onClick={this.setOrder}>заказать</p>
                </div>
                <div id="box1">
                    <p className="redimg"><img src="img/BMSM.png" alt=""/></p>
