@@ -21,6 +21,7 @@ class Body extends React.Component {
     axios.post('./rest/order.php',JSON.stringify(data))
     .then(function(response){
         console.log(response.data);
+        document.getElementById('bin').style.display = 'none';
     })
     }
     render(){

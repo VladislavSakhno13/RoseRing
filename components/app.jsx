@@ -165,7 +165,7 @@ function renderSergi(datasergi){ //для серег хуита
     div.appendChild(p);
     document.getElementById('serbox').appendChild(div);
 }
-function renderPodves(datapodves){ //тута подвески хуески вся хуйня
+function renderPodves(datapodves){ //тута подвески 
     const div = document.createElement('div');
     div.className = "ringform";
     const img = document.createElement('img');
@@ -187,7 +187,7 @@ function renderPodves(datapodves){ //тута подвески хуески вс
     div.appendChild(p);
     document.getElementById('podvesbox').appendChild(div);
 }
-function renderKulon(datakulon){ //тут чиляться кулоны ебать их в рот
+function renderKulon(datakulon){ //тут чиляться кулоны 
     const div = document.createElement('div');
     div.className = "ringform";
     const img = document.createElement('img');

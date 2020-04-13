@@ -4,7 +4,7 @@ $input = json_decode($inputJSON, TRUE);
 
 $conect = new mysqli('127.0.0.1','root','','ringrose');
  if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if(isset($input['phone'])){
+    if($input['phone'] != ""){
         $conect->query("INSERT INTO `orders` (`name`,`articul`,`phone`) VALUES('$input[name]','$input[articul]','$input[phone]')");
         //$data = $sql->fetch_assoc();
         exit(json_encode($data));
